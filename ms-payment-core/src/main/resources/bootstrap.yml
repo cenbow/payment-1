@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ms-payment-core
+  cloud:
+    config:
+      discovery:
+        enabled: true
+    zookeeper:
+      discovery:
+        register: true
+  main:
+    allow-bean-definition-overriding: true

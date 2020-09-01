@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ms-payment-gateway-generic
+  cloud:
+    config:
+      discovery:
+        enabled: true
+    zookeeper:
+      discovery:
+        register: true
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    default-property-inclusion: non_null

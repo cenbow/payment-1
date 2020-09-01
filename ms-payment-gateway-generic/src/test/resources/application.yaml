@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    zookeeper:
+      connect-string: zk.dev.sz.xiac.io:2181
+      discovery:
+        root: /develop/wangbz/services
+        prefer-ip-address: true

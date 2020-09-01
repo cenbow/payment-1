@@ -1,0 +1,36 @@
+server:
+  port: 6001
+
+application:
+  trade:
+    providers:
+      - code: "xiac.trade.customer.create"
+        handler-class: com.ixiachong.platform.ms.payment.core.trade.customer.HandlerService
+        biz-class: com.ixiachong.platform.ms.payment.core.trade.customer.Request
+      - code: "xiac.trade.account.create"
+        handler-class: com.ixiachong.platform.ms.payment.core.trade.account.CreateService
+        biz-class: com.ixiachong.platform.ms.payment.core.trade.account.CreateRequest
+      - code: "xiac.trade.merchant.create"
+        handler-class: com.ixiachong.platform.ms.payment.core.trade.merchant.CreateMerchantService
+        biz-class: com.ixiachong.platform.ms.payment.core.request.MerchantCreateRequest
+      - code: "xiac.trade.merchant.withdraw.config"
+        handler-class: com.ixiachong.platform.ms.payment.core.trade.merchant.WithdrawConfigService
+        biz-class: com.ixiachong.platform.ms.payment.core.request.MerchantConfigRequest
+      - code: "xiac.trade.merchant.withdraw.channel.bind"
+        handler-class: com.ixiachong.platform.ms.payment.core.trade.merchant.WithdrawConfigChannelsService
+        biz-class: com.ixiachong.platform.ms.payment.core.request.MerchantConfigChannelRequest
+      - code: "xiac.trade.merchant.withdraw.channel.unbind"
+        handler-class: com.ixiachong.platform.ms.payment.core.trade.merchant.DeleteWithdrawConfigService
+        biz-class: com.ixiachong.platform.ms.payment.core.request.BaseMerchantChannelRequest
+      - code: "xiac.trade.merchant.withdraw.channel.query"
+        handler-class: com.ixiachong.platform.ms.payment.core.trade.merchant.GetWithdrawConfigService
+        biz-class: com.ixiachong.platform.ms.payment.core.request.BaseMerchantRequest
+      - code: "xiac.trade.withdraw"
+        handler-class: com.ixiachong.platform.ms.payment.core.trade.withdraw.WithdrawHandlerService
+        biz-class: com.ixiachong.platform.ms.payment.core.trade.withdraw.BizContent
+      - code: "xiac.trade.withdraw.query"
+        handler-class: com.ixiachong.platform.ms.payment.core.trade.withdraw.WithdrawQueryService
+        biz-class: com.ixiachong.platform.ms.payment.core.trade.withdraw.WithdrawQueryRequest
+      - code: "xiac.trade.account.balance"
+        handler-class: com.ixiachong.platform.ms.payment.core.trade.account.AccountQueryService
+        biz-class: com.ixiachong.platform.ms.payment.core.trade.account.AccountQueryRequest

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ms-payment-crypto
+  cloud:
+    config:
+      discovery:
+        enabled: true
+    zookeeper:
+      discovery:
+        register: true
+  main:
+    allow-bean-definition-overriding: true
+

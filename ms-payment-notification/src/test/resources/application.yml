@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: false
+      uri: http://config.wangbz.ins.sz.xiac.io
+      name: ${spring.application.name}
+    zookeeper:
+      discovery:
+        register: true
+        root: /develop/wangbz/services
+      connect-string: zk.dev.sz.xiac.io:2181
